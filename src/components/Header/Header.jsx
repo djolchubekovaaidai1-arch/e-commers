@@ -11,11 +11,11 @@ const Header = () => {
 
   // Ссылки меню для удобства вынесены в массив
   const navLinks = [
-    { title: 'Home', href: '#' },
-    { title: 'Categories', href: '#' },
-    { title: 'Shop', href: '#' },
-    { title: 'About us', href: '#' },
-    { title: 'Contact us', href: '#' },
+   { title: 'Home', href: '/' },
+    { title: 'Categories', href: '/categories' },
+    { title: 'Shop', href: '/shop' },
+    { title: 'About us', href: '/about-us' },
+    { title: 'Contact us', href: '/contact-us' },
   ];
 
   return (

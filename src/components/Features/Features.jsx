@@ -26,7 +26,7 @@ const FeaturesSection = () => {
   ];
 
   return (
-    <section className="bg-[#fdf8f4] py-12 px-4">
+    <section className="bg-[#f5ede3] py-12 px-4">
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
         {features.map((feature, index) => (
           <div key={index} className="flex flex-col items-center text-center space-y-3">

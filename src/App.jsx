@@ -1,22 +1,20 @@
-import React from 'react'
+
+import { Route, Routes } from 'react-router-dom'
 import Header from './components/Header/Header'
-import Hero from './components/Hero/Hero'
-import ProductList from './components/ProductList/ProductList'
-import CategoryList from './components/CategoryList/CategoryList'
-import Features from './components/Features/Features'
-import PromoBanner from './components/PromoBanner/PromoBanner'
-import FeaturedProducts from './components/FeaturedProducts/FeaturedProducts'
+import Home from './pages/Home'
+import Footer from './components/Footer/Footer'
+import CategoryProducts from './pages/CategoryProducts'
+
 
 const App = () => {
   return (
     <div>
-      <Header/>
-      <Hero/>
-      <ProductList/>
-      <Features/>
-      <CategoryList/>
-      <PromoBanner/>
-      <FeaturedProducts/>
+      <Header />
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/category-products/:id' element={<CategoryProducts />} />
+      </Routes>
+      <Footer />
     </div>
   )
 }

@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const CategoryList = () => {
   const [categories, setCategories] = useState([]);
   const [loading, setLoading] = useState(true);
+  const navigate = useNavigate();
 
   useEffect(() => {
     // Категорияларды алуу (биринчи 4 же 5 категорияны көрсөтүү үчүн limit коштук)
@@ -39,9 +41,12 @@ const CategoryList = () => {
               />
 
               {/* Сүрөттүн үстүндөгү капсула (Button/Badge) */}
-              <div className="absolute bottom-6 left-1/2 -translate-x-1/2 w-[85%]">
+              <div onClick={()=>{
+                    console.log(cat.id);
+                    navigate(`/category-products/${cat.id}`);
+                  }} className="absolute bottom-6 left-1/2 -translate-x-1/2 w-[85%]">
                 <div className="bg-white/60 backdrop-blur-md py-3 rounded-full text-center transition hover:bg-white/90">
-                  <span className="text-xs font-bold uppercase tracking-widest text-stone-800">
+                  <span  className="text-xs font-bold uppercase tracking-widest text-stone-800">
                     {cat.name}
                   </span>
                 </div>
